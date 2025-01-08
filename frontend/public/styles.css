@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  padding: 0 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #1976D2;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+/* Footer Styles */
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+/* Note Card Styles */
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px #ccc;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: #1976D2;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Delete & Edit Button Styles */
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #1976D2;
+  border: none;
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.note button:hover {
+  color: #ff5252;
+}
+
+/* Form Styles */
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form.create-note:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+form.create-note input:focus,
+form.create-note textarea:focus {
+  background-color: #e0f7fa;
+}
+
+
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #1976D2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form.create-note button:hover {
+  background-color: #005cb2;
+  transform: scale(1.1);
+}
+
+form.create-note button::before {
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+  line-height: 48px;
+}
+
+/* Search Styles */
+.search-container {
+  display: flex;
+  align-items: center; 
+  margin: 20px auto;
+}
+
+.search-container input {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  outline: none; 
+  font-size: 1em; 
+  margin-right: 5px; 
+}
+
+.search-container button {
+  padding: 10px 15px;
+  background-color: #1976D2; 
+  color: white; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.search-container button:hover {
+  background-color: #005cb2; 
+}
+
+/* Notification Styles */
+.notification {
+  background-color: rgb(245, 245, 247);
+  color: #222121;
+  padding: 15px;
+  text-align: center;
+  position: fixed; 
+  top: 50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 50%; 
+  z-index: 10;
+  transition: opacity 0.5s ease;
+  border-radius: 5px; 
+}
+
+/* Add button Styles */
+.add-note-button {
+  background-color: #005cb2; 
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.add-note-button:hover {
+  background-color: rgb(78, 14, 253); 
+  transform: scale(1.1); 
+}
+
+.add-note-button:active {
+  background-color: #005cb2; 
+  transform: scale(1); 
+}
+
+.add-note-button svg {
+  color: white; 
+  font-size: 24px; 
+}
+
+/* Map Styles */
+.map-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: 100%; 
+  padding: 20px;
+}
+
+#map {
+  margin-top: 50px;
+  width: 100%;
+  height: 75%; 
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+}
